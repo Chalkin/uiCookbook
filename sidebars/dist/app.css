@@ -53,23 +53,23 @@ body {
  * Sidebar toggle
  */
 /**
- * Sidebars open by default
+ * Sidebars closed by default
  */
 .sidebar {
-  width: 20%; }
+  display: none; }
 
 label[for=sidebar-1-toggle]:after,
 label[for=sidebar-2-toggle]:after {
-  content: '\2013'; }
+  content: '+'; }
 
 #sidebar-1-toggle:checked ~ label[for=sidebar-1-toggle]:after,
 #sidebar-2-toggle:checked ~ label[for=sidebar-2-toggle]:after {
-  content: '+'; }
+  content: '\2013'; }
 
-#sidebar-1-toggle:checked ~ label[for=sidebar-1-toggle] ~ .sidebar-1,
-#sidebar-2-toggle:checked ~ label[for=sidebar-2-toggle] ~ .sidebar-2 {
-  display: none;
-  width: 0; }
+#sidebar-1-toggle:checked ~ .sidebar-1,
+#sidebar-2-toggle:checked ~ .sidebar-2 {
+  display: block;
+  width: 20%; }
 
 /**
  * checkboxes open/close the sidebars
